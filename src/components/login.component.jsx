@@ -11,4 +11,4 @@ function loginForm() {
     )
 }
 
-export default loginForm();
+export default loginForm;
