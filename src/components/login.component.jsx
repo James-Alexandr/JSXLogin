@@ -1,13 +1,15 @@
 import React from 'react';
 import Input from './input.component';
 
-function loginForm() {
+function loginForm(props) {
 
     return (
         <form className="form">
+            <h1>{props.userRegistered ? "Login" : "Register"} </h1>
             <Input type="text" placeholder="username" />
             <Input type="password" placeholder="password" />
-            <button type="submit">Login</button>
+            {!props.userRegistered ? <Input type="password" placeholder="password" /> : null}
+            <button type="submit">{props.userRegistered ? "Login" : "Register"}</button>
         </form>
     )
 }
