@@ -1,12 +1,12 @@
 import React from "react";
 import Login from './login.component';
 
+var userLoggedIn = true;
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <Login />
+      {userLoggedIn === true ? <h1>Hello</h1> : <Login />}
     </div>
   );
 }
